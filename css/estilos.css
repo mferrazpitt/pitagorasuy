@@ -12,10 +12,17 @@ box-sizing: border-box;
 */
 
 /* GENERAL ////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.container {
+  max-width: 100% !important; 
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden; /* Evita scroll horizontal */
 }
 h2 {
   font-weight: 900;
@@ -258,11 +265,25 @@ footer {
   }
  .slider img {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
   }
  .novedades {
    grid-template-columns:1fr;
+  }
+  .novedades_1 img, .novedades_2 img, .novedades_3 img, .novedades_4 img {
+  width: 100%;
+  height: 230px;
+  }
+  .intro {
+   font-size: 1.2rem;
+   padding-bottom: 5px;
+  }
+  .servicios {
+   grid-template-columns: 1fr;
+  }
+  .impresiones, .objetos, .service {
+   grid-column: 1;
   }
  footer {
     display: flex;

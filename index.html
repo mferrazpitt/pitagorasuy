@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pitágoras Uy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
  <div class="container">
    <header class="header">
         <div class="logo">  
-             <img src="img/logo.png" alt="Pitágoras Uy">
+             <a href="#"><img src="img/logo.png" alt="Pitágoras Uy"></a>
         </div>
        <h1>Pitágoras Uy</h1>
      <!-- MENÚ PRINCIPAL ------------------------------------------------------------------------------------------------------>
@@ -23,12 +24,27 @@
             </ul>
         </nav>
    </header>
-   <main class="slider">
-     <!-- Carrusel ------------------------------------------------------------------------------------------------------>
-     <img src="./img/slider/slider_1.jpg">    
+   <!-- Carrusel ------------------------------------------------------------------------------------------------------>
+     <main id="carouselExample" class="carousel slide slider">
+       <div class="carousel-inner">
+         <div class="carousel-item active">
+            <img src="img/slider/slider_1.jpg" class="d-block w-100" alt="...">
+         </div>
+        <div class="carousel-item">
+           <img src="img/slider/slider_2.jpg" class="d-block w-100" alt="...">
+         </div>
+       </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>   
    </main>
+   <!-- Novedades ------------------------------------------------------------------------------------------------------>
    <section class="section">
-    <!-- Novedades ------------------------------------------------------------------------------------------------------>
     <h2>NOVEDADES</h2>
        <div class="novedades">
           <div class="novedades_1">
@@ -49,7 +65,7 @@ Llevate el Cuaderno, los posavasos y la taza de estas trillizas tan valientes co
            </div>
           <div class="novedades_4">
              <img src="img/news/novedades_4.jpg" alt="Novedades">
-             <h3>Novedad Premium: Papel Fotográfico Microporus 260gm</h3>
+             <h3>Novedad Premium: Papel Fotográfico Microporus 260gr</h3>
              <p>Llevá tus fotos al nivel de un estudio profesional. Nuestro nuevo papel Microporus de 260g es la opción de mayor calidad para quienes no aceptan menos que la perfección:</p>
           </div>
        </div>
@@ -63,7 +79,7 @@ Llevate el Cuaderno, los posavasos y la taza de estas trillizas tan valientes co
           <p><a href="https://www.instagram.com/pitagoras.uy" target="_blank">/pitagoras.uy</a></p>
        </div>
        <div class="legal">
-         <p>Todos los productos están sujeto a stock. Las imágenes y descripciones son utilizadas a modo de ejemplo y pueden no coincidir exactamente con la del producto.</p>
+         <p>Todos los productos están sujetos a stock. Las imágenes y descripciones son utilizadas a modo de ejemplo y pueden no coincidir exactamente con la del producto.</p>
        </div>
        <div class="dir">
          <p>Visitanos en <b>Tristán Narvaja 1655</b> esq. Uruguay</p>
@@ -74,6 +90,9 @@ Llevate el Cuaderno, los posavasos y la taza de estas trillizas tan valientes co
        </div>
     </footer>
   </div>
-  <a href="https://wa.link/xngdyz" target="_blank"><img class="wsp" src="img/wsp.png" alt="Escribinos por Whatsapp"></a>
+  <!-- WSP ------------------------------------------------------------------------------------------------------>
+    <a href="https://wa.link/xngdyz" target="_blank"><img class="wsp" src="img/wsp.png" alt="Escribinos por Whatsapp"></a>
+  <!-- JS bosstrap ------------------------------------------------------------------------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
