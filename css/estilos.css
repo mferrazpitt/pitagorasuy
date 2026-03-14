@@ -83,6 +83,10 @@ nav {
   justify-self: end;
   font-size: 1.2rem;
 }
+.navbar {
+  padding: 0 !important;
+  background-color: transparent !important;
+}
 .topnav {
   gap: 10px;
   list-style: none;
@@ -96,6 +100,7 @@ nav {
   padding: 8px 20px;
   display: inline-block;
   text-decoration: none;
+  font-weight: 900;
 }
 .topnav a:hover {
 color: #f9bd53;
@@ -103,6 +108,13 @@ color: #f9bd53;
 .active {
 background-color: #f9bd53;
 color: #522a6f !important;
+}
+.nav-item.active .nav-link, 
+.nav-item.dropdown.active .nav-link {
+    background-color: #f9bd53 !important;
+    color: #522a6f !important; /* Letra violeta */
+    font-weight: 900;
+    border-radius: 5px;
 }
 .nav-item.dropdown .nav-link.show {
   background-color: #f9bd53 !important;
@@ -116,12 +128,20 @@ color: #522a6f !important;
 }
 .dropdown-item {
   color: #522a6f !important;
-  font-weight: 400;
+  font-weight: 600 !important;
+  font-size: 1.1em;
 }
 .dropdown-item:hover {
     background-color: #522a6f !important;
     color: #faeadd !important;
 }
+.nav-item.active .nav-link:hover,
+.nav-item.dropdown.active .nav-link:hover,
+.nav-item.dropdown.active .nav-link:focus {
+    color: #522a6f !important; /* Mantiene la letra violeta */
+    background-color: #f9bd53 !important; /* Mantiene el fondo amarillo */
+}
+
 /*
 nav {
   grid-column: 3 / 5;
