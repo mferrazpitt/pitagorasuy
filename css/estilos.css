@@ -106,7 +106,7 @@ nav {
 color: #f9bd53;
 }
 .active {
-background-color: #f9bd53;
+background-color: #f9bd53 !important;
 color: #522a6f !important;
 }
 .nav-item.active .nav-link, 
