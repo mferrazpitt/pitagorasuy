@@ -1,4 +1,15 @@
 @use "../generales/variables" as*;
+.encabezado {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: auto; 
+        display: block;
+        object-fit: contain;
+    }
+}
 .intro {
     padding: 30px 20px;
     font-size: 1.3rem;

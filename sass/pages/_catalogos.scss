@@ -1,1 +1,59 @@
 @use "../generales/variables" as*;
+
+.menu-tazas {
+ padding-bottom: 20px;
+    a {
+     color: $violeta;
+       &:hover {
+      color: $amarillo;
+     }
+}
+.active {
+      background-color: $violeta !important;
+      color: $blanco !important;
+      }
+.disabled {
+      opacity: 30%;
+      }
+}
+.catalogo {
+  @include grid4;
+  %etiqueta-precio {
+    position: absolute;
+    bottom: 45px;
+    right: 10px;
+    background-color: $violeta;
+    color: $blanco;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    z-index: 10;
+  }
+  .producto {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    h3 {
+      text-align: center;
+      padding: 10px 0;
+    }
+    &.premium::after {
+      @extend %etiqueta-precio;
+      content: "$350";
+    }
+    &.plus::after {
+      @extend %etiqueta-precio;
+      content: "$300";
+    }
+    &.clasica::after {
+      @extend %etiqueta-precio;
+      content: "$250";
+    }
+  }
+}
