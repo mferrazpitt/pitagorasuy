@@ -1,0 +1,12 @@
+$amarillo: #f9bd53;
+$blanco: #faeadd;
+$violeta: #522a6f;
+$negro: #222023;
+
+@mixin grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
