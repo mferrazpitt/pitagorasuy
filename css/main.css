@@ -28,7 +28,7 @@ body a {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768) {
   .container {
     display: flex;
     flex-direction: column;
@@ -129,28 +129,29 @@ footer {
   background-color: #222023;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: top;
+  align-items: start;
   padding: 20px 0;
 }
 footer .info {
-  grid-column: 1;
   margin-left: 30px;
 }
 footer .info a {
   color: #faeadd;
 }
+footer .info a:hover {
+  color: #f9bd53;
+}
 footer .info p {
   margin-bottom: 5px;
 }
 footer .legal {
-  grid-column: 2;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 footer .dir {
-  grid-column: 3;
-  justify-items: right;
+  text-align: right;
 }
 footer .mapa {
-  grid-column: 4;
   display: flex;
   justify-content: flex-end;
   padding-right: 30px;
@@ -166,9 +167,29 @@ footer .mapa iframe {
   position: fixed;
   right: 15px;
   bottom: 40px;
+  transition: transform 0.3s ease;
+}
+.wsp:hover {
+  transform: scale(1.1);
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer .info, footer .legal, footer .dir, footer .mapa {
+    grid-column: span 1;
+    text-align: center;
+    padding: 10px;
+  }
+  footer .mapa {
+    justify-content: flex-start;
+  }
+  footer .mapa iframe {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
   header {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -379,7 +400,7 @@ footer .mapa iframe {
   padding: 20px;
   width: 100%;
 }
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .catalogo {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;

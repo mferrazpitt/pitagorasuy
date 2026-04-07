@@ -93,27 +93,28 @@ footer {
   background-color: $negro;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: top;
+  align-items: start;
   padding: 20px 0;
   .info {
-  grid-column: 1;
   margin-left: 30px;
   a {
   color: $blanco;
+  &:hover {
+    color: $amarillo;
+    }
 }
 p {
   margin-bottom: 5px;
 }
 }
 .legal {
-  grid-column: 2;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 .dir {
-  grid-column: 3;
-  justify-items: right;
+  text-align: right;
 }
 .mapa {
-  grid-column: 4;
   display: flex;
   justify-content: flex-end;
   padding-right: 30px;
@@ -121,16 +122,34 @@ p {
   width: 100%;
   max-width: 400px;
   border-radius: 8px;
-}
-}
+   }
+  }
 }
 .wsp {
   width: 50px;
   position: fixed;
   right: 15px;
   bottom: 40px;
+  transition: transform 0.3s ease;
+  &:hover {
+  transform: scale(1.1);
+ }
 }
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:1024px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    .info, .legal, .dir, .mapa {
+      grid-column: span 1;
+      text-align: center;
+      padding: 10px;
+    }
+    .mapa {
+      justify-content: flex-start;
+      iframe { max-width: 100%; }
+    }
+  }
+}
+@media only screen and (max-width:768px) {
      header {
       grid-template-columns: 1fr;
       justify-items: center;

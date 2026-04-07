@@ -18,7 +18,7 @@
 }
 .catalogo {
   @include grid4;
-  @media (max-width: 1024px) {
+  @media only screen and (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
