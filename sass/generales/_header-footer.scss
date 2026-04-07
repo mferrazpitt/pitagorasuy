@@ -84,6 +84,76 @@ header {
 }
 }
 }
+// RESPONSIVE HEADER
+/*RESPONSIVE HEADER*/
+@media only screen and (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    min-height: 80px;
+    .logo {
+       grid-column: 1;
+       margin-left: 20px;
+      }
+    .barramenu {
+      grid-column: 2;
+      padding-right: 20px !important;
+      align-self: center;
+      .topnav .nav-link {
+        align-items: center;
+        padding: 8px 12px;
+        font-size: 0.95rem;
+      }
+    }
+  }
+  }
+@media only screen and (max-width:480px) {
+    header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    .logo {
+      margin-left: 0;
+      margin-bottom: 15px;
+      width: 110px;
+      }
+    .barramenu {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .topnav {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        li {
+          width: 100%;
+          text-align: center;
+        }
+        .nav-link {
+          display: block;
+          width: 100%;
+          padding: 12px 0;
+          border-bottom: 1px solid rgba($blanco, 0.1);
+        }
+      }
+    }
+  
+    .dropdown-menu {
+      position: static !important;
+      float: none;
+      width: 100%;
+      text-align: center;
+      background-color: darken($violeta, 5%) !important;
+      .dropdown-item {
+        color: $blanco !important;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
 // FOOTER
 /*FOOTER*/
 footer {
@@ -93,28 +163,27 @@ footer {
   background-color: $negro;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: start;
+  align-items: top;
   padding: 20px 0;
   .info {
+  grid-column: 1;
   margin-left: 30px;
   a {
   color: $blanco;
-  &:hover {
-    color: $amarillo;
-    }
 }
 p {
   margin-bottom: 5px;
 }
 }
 .legal {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  grid-column: 2;
 }
 .dir {
-  text-align: right;
+  grid-column: 3;
+  justify-items: right;
 }
 .mapa {
+  grid-column: 4;
   display: flex;
   justify-content: flex-end;
   padding-right: 30px;
@@ -130,52 +199,26 @@ p {
   position: fixed;
   right: 15px;
   bottom: 40px;
-  transition: transform 0.3s ease;
-  &:hover {
-  transform: scale(1.1);
- }
 }
-@media only screen and (max-width:1024px) {
-  footer {
+// RESPONSIVE FOOTER
+/*RESPONSIVE FOOTER*/
+@media only screen and (max-width: 768px) {
+footer {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
     .info, .legal, .dir, .mapa {
       grid-column: span 1;
-      text-align: center;
+      align-content: center;
       padding: 10px;
     }
     .mapa {
       justify-content: flex-start;
+      padding: 10px;
       iframe { max-width: 100%; }
     }
   }
 }
-@media only screen and (max-width:768px) {
-     header {
-      grid-template-columns: 1fr;
-      justify-items: center;
-      padding: 20px 0;
-           .logo { 
-            justify-self: center;
-            margin-left: 0;
-           margin-bottom: 15px;
-          }
-            .barramenu {
-            grid-column: 1;
-            justify-self: center;
-            margin-right: 0;
-            margin-bottom: 0;
-               .topnav {
-               flex-direction: column; 
-               align-items: center;
-               gap: 15px;
-                  a {
-                 text-align: center;
-                 width: 100%; 
-                 padding: 10px 20px;
-                 }
-               }
-            }
-     }
+@media only screen and (max-width: 480px) {
      footer {
       display: flex;
       flex-direction: column;
@@ -184,8 +227,7 @@ p {
       padding: 30px 15px;
           .info, .dir, .legal, .mapa {
           width: 100%;
-          margin: 10px 0;
-          padding: 0;
+          padding: 10px;
           justify-items: center;
           }
      }
